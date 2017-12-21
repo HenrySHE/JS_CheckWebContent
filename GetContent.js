@@ -11,6 +11,28 @@
 (function() {
     'use strict';
 
+    $(document).ready(function(){
+        if($("#MAI03STA").text()>5){
+            $("#MAI03STA").css("background-color","green");
+        }
+        if($("#MAI03STA").text()>0){
+            $("#MAI03STA").css("background-color","yellow");
+        }
+        else{
+            $("#MAI03STA").css("background-color","red");
+        }
+        //MAI04STA
+        if($("#MAI04SRA").text()>5){
+            $("#MAI04SRA").css("background-color","green");
+        }
+        if($("#MAI04SRA").text()>0){
+            $("#MAI04SRA").css("background-color","yellow");
+        }
+        else{
+            $("#MAI04SRA").css("background-color","red");
+        }
+    });
+
     var hrefs = new Array();
     var elements = $('.postTitle > a');
     elements.each(function() {
@@ -26,20 +48,20 @@
         });
     });
 
-   // var status3 = $("#MAI03STA").text();
-    $('.menu').after('<input type="button" id="google" value="Google一下" class="btn self-btn bg s_btn" style="background-color:grey;" />');
+    // var status3 = $("#MAI03STA").text();
+    $('.menu').after('<input type="button" id="google" value="ReFormat" class="btn self-btn bg s_btn" style="background-color:grey;" />');
+
     $("#google").click(function() {
-		//This code is used to detect  the "Single study table is full (0), empty(>5) or still have some seats(1~5)"
-        if($("#MAI03STA").text()>5){
-            $("#MAI03STA").css("background-color","green");
+        //var result = $("#Table .trLibItem").toArray();
+
+
+        /*
+        for (i=0;i<resul.length;i++){
+            alert(result[i].val);
         }
-        if($("#MAI03STA").text()>0){
-            $("#MAI03STA").css("background-color","yellow");
-        }
-        else{
-            $("#MAI03STA").css("background-color","red");
-        }
-        //alert(status3);
+        */
+        //$("#Table .trLibItem").css({"color":"red","border":"2px solid red"});
+        //alert(test);
         //googleIt();
 
     });
